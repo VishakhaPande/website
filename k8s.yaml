@@ -16,7 +16,7 @@ spec:
       - name: app
         image: asia-south2-docker.pkg.dev/my-project-new-490705/myrepo/app:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 80
         # Make sure your app listens on 0.0.0.0 inside container
 
 ---
@@ -30,4 +30,4 @@ spec:
   type: LoadBalancer
   ports:
   - port: 80          # External port
-    targetPort: 3000  # Container port
+    targetPort: 80  # Container port
