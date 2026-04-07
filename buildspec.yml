@@ -19,8 +19,8 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_NAME:$IMAGE_TAG .
-      - docker build -t vishu-website .
-      - docker tag vishu-website:latest $REPOSITORY_URI:latest
+      - docker build -t website .
+      - docker tag website:latest $REPOSITORY_URI:latest
   post_build:
     commands:
       - echo Build completed on `date`
